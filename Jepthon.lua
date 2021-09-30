@@ -1107,7 +1107,7 @@ UserName = "]]..data.username_..[["
 ]])
 A:close()
 database:del(bot_id.."Ed:DevBots")
-dofile('BoykA.lua')  
+dofile('Jepthon.lua')  
 else
 send(msg.chat_id_,msg.id_, "*✬︙عذرا صاحب الايدي لا يمتلك معرف ارسل ايدي اخر*")
 end
@@ -1122,10 +1122,10 @@ if text =='تغيير المطور الاساسي ✬' and not SudoBot(msg) then
 send(msg.chat_id_, msg.id_,'*✬︙لا يمكنك تغيير المطور الاساسي*')
 end
 if text == 'تحديث السورس ✬' and DevBoykAW(msg) then 
-os.execute('rm -rf BoykA.lua')
-os.execute('wget https://raw.githubusercontent.com/BOYKA-DeV/BoykA/main/BoykA.lua')
+os.execute('rm -rf Jepthon.lua')
+os.execute('wget https://raw.githubusercontent.com/almul8ab/Jepthon/main/Jepthon.lua')
 send(msg.chat_id_, msg.id_,' *✬︙تم تحديث السورس* \n*✬︙لديك اخر اصدار لسورس جيبثون*\n*✬︙الاصدار » { 2.8v}*')
-dofile('BoykA.lua')  
+dofile('Jepthon.lua')  
 end
 if text == 'الاصدار ✬' and DevBoykAW(msg) then 
 database:del(bot_id..'Srt:Bot') 
@@ -2321,10 +2321,10 @@ database:set(bot_id..'Num:Add:Bot',Num)
 send(msg.chat_id_, msg.id_,' *✬︙تم تعيين عدد الاعضاء سيتم تفعيل الكروبات التي اعضائها اكثر من  >> {'..Num..'} عضو*')
 end
 if text == 'تحديث السورس' and DevBoykAW(msg) then 
-os.execute('rm -rf BoykA.lua')
-os.execute('wget https://raw.githubusercontent.com/BOYKA-DeV/BoykA/main/BoykA.lua')
+os.execute('rm -rf Jepthon.lua')
+os.execute('wget https://raw.githubusercontent.com/almul8ab/Jepthon/main/Jepthon.lua')
 send(msg.chat_id_, msg.id_,' *✬︙تم تحديث السورس* \n*✬︙لديك اخر اصدار لسورس جيبثون*\n*✬︙الاصدار » { 2.8v}*')
-dofile('BoykA.lua')  
+dofile('Jepthon.lua')  
 end
 if text and text:match("^تغير الاشتراك$") and DevBoykAW(msg) then  
 database:setex(bot_id.."add:ch:jm" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 360, true)  
@@ -3525,7 +3525,7 @@ send(msg.chat_id_, msg.id_,' *✬︙تم فتح التكرار*')
 end
 ------------------------------------------------------------------------ امـيـر الـدلـيـم
 if text == 'تحديث' and DevBoykAW(msg) then
-dofile('BoykA.lua')  
+dofile('Jepthon.lua')  
 send(msg.chat_id_, msg.id_, ' *✬︙تم تحديث جميع الملفات*') 
 end 
 if text == ("مسح قائمه العام") and DevBoykAW(msg) then
@@ -3843,11 +3843,11 @@ t = " *✬︙الملف »* "..file.."\n*✬︙تم تعطيل ملف* \n"
 else
 t = " *✬︙بالتاكيد تم تعطيل ملف →* "..file.."\n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/BOYKA-DeV/Files_BoykA/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/almul8ab/Files_Jepthon/main/File_Bot/"..file)
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
-dofile('BoykA.lua')  
+dofile('Jepthon.lua')  
 else
 send(msg.chat_id_, msg.id_," *✬︙عذرا الملف لايدعم سورس جيبثون* \n") 
 end
@@ -3869,7 +3869,7 @@ local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
 chek:close()
 send(msg.chat_id_, msg.id_,t) 
-dofile('BoykA.lua')  
+dofile('Jepthon.lua')  
 else
 send(msg.chat_id_, msg.id_," *✬︙عذرا الملف لايدعم سورس جيبثون* \n") 
 end
