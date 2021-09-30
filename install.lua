@@ -89,11 +89,11 @@ RunBot:write([[
 #!/usr/bin/env bash
 cd $HOME/BoykA
 token="]]..database:get(Server_Done.."Token_Write")..[["
-rm -fr BoykA.lua
+rm -fr Jepthon.lua
 wget "https://raw.githubusercontent.com/BOYKA-DeV/BoykA/main/BoykA.lua"
 while(true) do
 rm -fr ../.telegram-cli
-./tg -s ./BoykA.lua -p PROFILE --bot=$token
+./tg -s ./Jepthon.lua -p PROFILE --bot=$token
 done
 ]])
 RunBot:close()
